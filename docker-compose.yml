@@ -1,0 +1,11 @@
+version: "3.11"
+services:
+  main:
+    image: httpd:2
+    ports:
+      - 5001:80
+    volumes:
+      - ./main-conf:/usr/local/apache2/conf/
+  backend:
+    image: httpd:2
+    
